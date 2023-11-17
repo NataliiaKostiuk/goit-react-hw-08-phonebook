@@ -3,7 +3,7 @@ import { RegisterPage } from "./registerPage/registerPage";
 import { LoginPage } from "./loginPage/loginPage";
 import { Layout } from "./layout/layout";
 import { HomePage } from "./homePage/homePage";
-import { ContactsPage } from "./contactsPage/contactsPage";
+import { ContactsPage } from "../pages/contactsPage/contactsPage";
 import { RestrictedRoute } from "./restrictedRoute";
 import { PrivateRoute } from "./privateRoute";
 import { useAuth } from "./hook";
