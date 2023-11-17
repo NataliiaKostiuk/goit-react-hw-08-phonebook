@@ -16,9 +16,9 @@ import { useAuth } from "./hook";
 export const App = () => {
   const { isRefreshing } = useAuth();
 
-  return (
- 
-   
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) :  (   
   <Routes>
         <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
