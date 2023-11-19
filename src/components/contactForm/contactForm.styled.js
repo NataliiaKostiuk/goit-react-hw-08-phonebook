@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { ErrorMessage } from 'formik';
 
 export const Label = styled.label`
   font-size: 18px;
@@ -14,3 +15,7 @@ color:#434455;
 export const Title = styled.div`
 margin-top: 5px;`
 
+export const ErrMessage = styled(ErrorMessage)`
+width: 200px;
+margin-left:auto;
+margin-right: auto;`

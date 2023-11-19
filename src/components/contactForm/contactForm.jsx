@@ -1,6 +1,6 @@
-import { Formik, Field, Form ,ErrorMessage} from 'formik';
+import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
-import { Label, Btn, Title } from './contactForm.styled';
+import { Label, Btn, Title, ErrMessage } from './contactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
 import { nanoid } from 'nanoid';
@@ -42,11 +42,11 @@ export const ContactForm = () => {
       <Form>
       <Label htmlFor="name"><Title>Name</Title>
           <Field name="name" placeholder="name" />
-          <ErrorMessage name="name" component="div" />
+          <ErrMessage name="name" component="div" />
       </Label>
       <Label htmlFor="number"><Title>Number</Title>
           <Field type="tel" name="number" placeholder="tel" />
-          <ErrorMessage name="number" component="div" />
+          <ErrMessage name="number" component="div" />
       </Label>
     <Btn  type="submit">Add contact</Btn>
       </Form>

@@ -11,14 +11,15 @@ export const ContactList = () => {
   const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
+
+  	useEffect(() => {
+		dispatch(fetchContacts());
+	}, [dispatch]);
+
   const filterNormilized = filter.toLowerCase().trim();
   const visibleContacts = [...contacts].filter(contact =>
       contact.name.toLowerCase().includes(filterNormilized)
     );
-  
-  	useEffect(() => {
-		dispatch(fetchContacts());
-	}, [dispatch]);
 
     return (
       <List>
